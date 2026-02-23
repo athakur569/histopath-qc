@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "histopath-qc"
+version = "0.1.0"
+description = "QC filters for H&E histopathology patches: blur, entropy, tissue fraction"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Abhishek Thakur", email = "a.thakur5690@gmail.com"}]
+requires-python = ">=3.9"
+keywords = ["digital-pathology", "quality-control", "H&E", "computational-pathology"]
+dependencies = [
+    "numpy>=1.24.0",
+    "opencv-python>=4.8.0",
+    "Pillow>=10.0.0",
+    "pandas>=2.0.0",
+    "scipy>=1.10.0",
+    "tqdm>=4.65.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
